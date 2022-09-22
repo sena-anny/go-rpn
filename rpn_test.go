@@ -33,7 +33,7 @@ func TestRpn(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := Rpn(tt.args.input)
+			got, err := Rpn(tt.args.input...)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("Rpn() error = %v, wantErr %v", err, tt.wantErr)
 				return

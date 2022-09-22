@@ -2,7 +2,7 @@ package go_rpn
 
 import "fmt"
 
-func Rpn(input []interface{}) (int, error) {
+func Rpn(input ...interface{}) (int, error) {
 	var stack []int
 	for _, value := range input {
 		switch value.(type) {
