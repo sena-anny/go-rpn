@@ -34,7 +34,7 @@ func TestRpn(t *testing.T) {
 			"計算式が正しくない時はエラーが返される",
 			args{input: []interface{}{4, 6, 2, "+", "*", 3, 1, "-", 5, "*", "-", 9}},
 			0,
-			false,
+			true,
 		},
 	}
 	for _, tt := range tests {
