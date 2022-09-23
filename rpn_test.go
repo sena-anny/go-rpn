@@ -30,6 +30,12 @@ func TestRpn(t *testing.T) {
 			0,
 			true,
 		},
+		{
+			"計算式が正しくない時はエラーが返される",
+			args{input: []interface{}{4, 6, 2, "+", "*", 3, 1, "-", 5, "*", "-", 9}},
+			0,
+			false,
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

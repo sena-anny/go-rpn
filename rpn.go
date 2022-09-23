@@ -29,5 +29,8 @@ func Rpn(input ...interface{}) (int, error) {
 			return 0, fmt.Errorf("%v is invalid value", value)
 		}
 	}
+	if len(stack) > 1 {
+		return 0, fmt.Errorf("input is not correct")
+	}
 	return stack[0], nil
 }
